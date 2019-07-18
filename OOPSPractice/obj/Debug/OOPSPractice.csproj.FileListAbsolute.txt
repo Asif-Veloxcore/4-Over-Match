@@ -1,0 +1,7 @@
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\bin\Debug\OOPSPractice.exe.config
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\bin\Debug\OOPSPractice.exe
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\bin\Debug\OOPSPractice.pdb
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\obj\Debug\OOPSPractice.csprojAssemblyReference.cache
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\obj\Debug\OOPSPractice.csproj.CoreCompileInputs.cache
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\obj\Debug\OOPSPractice.exe
+D:\Asif\OOPS Practice\OOPSPractice\OOPSPractice\obj\Debug\OOPSPractice.pdb
