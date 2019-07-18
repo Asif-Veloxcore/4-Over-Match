@@ -10,6 +10,7 @@ namespace OOPSPractice
         public static int runCount = 40;
         public static int viratRUNS = 0;
         public static int rohitRUNS = 0;
+        public static int msDhoniRUNS = 0;
         public static int totalBalls = 24;
         //public string[] playerList;
         public static List<String> playerList = new List<string>()
@@ -40,7 +41,7 @@ namespace OOPSPractice
                         Console.WriteLine("\n2 Over Remaining and " + runCount + " Runs Remaining\n");
                     else if (balls == 6)
                         Console.WriteLine("\n1 Over Remaining and " + runCount + " Runs Remaining\n");
-                    int takenRun = randomRun.Next(0, 7);
+                    int takenRun = randomRun.Next(0, 8);
                     switch (takenRun)
                     {
                         case 0:                            
@@ -67,6 +68,7 @@ namespace OOPSPractice
                                 rohitRUNS++;
                                 playerOnStrike = playerList[0];
                             }
+
                             break;
                         case 2:
                             if (runCount > 1)
@@ -154,6 +156,22 @@ namespace OOPSPractice
                                 }
                             }
                             break;
+                        case 7:
+                            if (playerOnStrike == playerList[0])
+                            {
+                                Console.WriteLine("\tOUTTTT !!! " + playerOnStrike + " Bowled ! \n");
+                                playerList[0] = "MS Dhoni";
+                                playerOnStrike = playerList[0];
+                                Console.WriteLine("\tNew Batsman " + playerOnStrike + " On The Strike\n");                                
+                            }
+                            else
+                            {
+                                Console.WriteLine("\tOUTTTT !!! " + playerOnStrike + " Bowled ! \n");
+                                playerList[1] = "MS Dhoni";
+                                playerOnStrike = playerList[1];
+                                Console.WriteLine("\tNew Batsman " + playerOnStrike + " On The Strike\n");
+                            }
+                            break;
                     }
                 }                
             }
@@ -167,12 +185,16 @@ namespace OOPSPractice
             }
             Console.WriteLine("Virat Kohli Made "+viratRUNS+ " Runs \n");
             Console.WriteLine("Rohit Sharma Made "+rohitRUNS+ " Runs\n");
-            if(viratRUNS > rohitRUNS)
+            if(playerList.Contains("MS Dhoni"))
+            {
+                Console.WriteLine("MS Dhoni Made " + msDhoniRUNS + " Runs\n");
+            }
+            if(viratRUNS > rohitRUNS &&viratRUNS > msDhoniRUNS)
                 Console.WriteLine("Virat Kohli is The Man Of The Match \n");
-            else if (viratRUNS < rohitRUNS)
+            else if (rohitRUNS > viratRUNS && rohitRUNS > msDhoniRUNS)
                 Console.WriteLine("Rohit Sharma is The Man Of The Match\n");
-            else
-                Console.WriteLine(" ");
+            else if (msDhoniRUNS > viratRUNS && msDhoniRUNS > rohitRUNS)
+                Console.WriteLine("MS Dhoni is The Man Of The Match\n");
 
             Console.ReadLine();
         }
