@@ -11,11 +11,12 @@ namespace OOPSPractice
         public static int viratRUNS = 0;
         public static int rohitRUNS = 0;
         public static int msDhoniRUNS = 0;
-        public static int totalBalls = 24;
+        public static int playerCount = 1;
+
         //public string[] playerList;
         public static List<String> playerList = new List<string>()
         {
-                "Virat Kohli","Rohit Sharma"
+                "Virat Kohli","Rohit Sharma","MS Dhoni","Suresh Raina","Player1","Player2","Player3"
         };
     static void Main(string[] args)
         {
@@ -158,19 +159,17 @@ namespace OOPSPractice
                             break;
                         case 7:
                             if (playerOnStrike == playerList[0])
-                            {
+                            
                                 Console.WriteLine("\tOUTTTT !!! " + playerOnStrike + " Bowled ! \n");
-                                playerList[0] = "MS Dhoni";
-                                playerOnStrike = playerList[0];
+                                playerOnStrike = playerList[playerCount++];
                                 Console.WriteLine("\tNew Batsman " + playerOnStrike + " On The Strike\n");                                
-                            }
-                            else
-                            {
-                                Console.WriteLine("\tOUTTTT !!! " + playerOnStrike + " Bowled ! \n");
-                                playerList[1] = "MS Dhoni";
-                                playerOnStrike = playerList[1];
-                                Console.WriteLine("\tNew Batsman " + playerOnStrike + " On The Strike\n");
-                            }
+                            
+                            //else
+                            //{
+                            //    Console.WriteLine("\tOUTTTT !!! " + playerOnStrike + " Bowled ! \n");
+                            //    playerOnStrike = playerList[playerCount];
+                            //    Console.WriteLine("\tNew Batsman " + playerOnStrike + " On The Strike\n");
+                            //}
                             break;
                     }
                 }                
